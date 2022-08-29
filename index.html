@@ -36,21 +36,36 @@
           </div>
         </div>
       </nav>
-      <h2 class="bg-warning text-center py-4">
-        Hungry?? Order on Food Gunda right now!
-      </h2>
     </header>
     <main>
-      <section class="m-5">
-        <h3 class="text-center">Search Results</h3>
-
-        <div
-          id="meals-container"
-          class="row row-cols-1 row-cols-md-4 g-6"
-        ></div>
+      <section class="row row-cols-1 row-cols-md-2 g-2">
+        <section class="col-9">
+          <h4 class="text-center m-5 bg-dark text-light rounded">
+            Search Results
+          </h4>
+          <div
+            id="meals-container"
+            class="row row-cols-1 row-cols-md-4 g-6"
+          ></div>
+        </section>
+        <section class="col-3">
+          <div class="text-center bg-success">
+            <h3 class="text-light">Popular now</h3>
+            <div id="popular-meal-container"></div>
+          </div>
+          <div class="bg-warning text-center py-4">
+            <h2>Catagories</h2>
+            <div
+              id="catagory-container"
+              class="row row-cols-1 row-cols-md-1 mx-3 g-2"
+            ></div>
+          </div>
+        </section>
       </section>
     </main>
 
     <script src="js/meal.js"></script>
+    <script src="js/catagories.js"></script>
+    <script src="js/popularMeal.js"></script>
   </body>
 </html>

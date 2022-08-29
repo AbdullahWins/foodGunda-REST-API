@@ -1,26 +1,19 @@
 //
 
-const searchField = document.getElementById("search-field");
-const searchBtn = document.getElementById("search-btn");
-
-const loadMeals = () => {
-  const url = `https://www.themealdb.com/api/json/v1/1/search.php?s=${searchField.value}`;
+const loadPopular = () => {
+  const url = "https://www.themealdb.com/api/json/v1/1/random.php";
   fetch(url)
     .then((res) => res.json())
-    .then((data) => displayMeals(data.meals));
+    .then((data) => displayPopular(data.meals[0]));
 };
 
-const displayMeals = (meals) => {
-  const mealContainer = document.getElementById("meals-container");
-  mealContainer.innerHTML = "";
-  meals.forEach((meal) => {
-    const recepie = document.createElement("div");
-    recepie.innerHTML = `
-               <div class="col">
-                  <div class="card bg-light">
+const displayPopular = (meal) => {
+  const popularContainer = document.getElementById("popular-meal-container");
+  popularContainer.innerHTML = `
+  <div class="bg-light">
                     <img src="${
                       meal.strMealThumb
-                    }" class="card-img-top" alt="..." />
+                    }" class="card-img-top"/>
                     <div class="card-body">
                       <h6 class="card-title">${meal.strMeal}</h6>
                       <p class="card-text text-wrap">Ingredients:
@@ -48,12 +41,8 @@ const displayMeals = (meals) => {
                         }</small>
                     </div>
                   </div>
-                  </div>
-        `;
-    mealContainer.appendChild(recepie);
-  });
+    `;
+  console.log(popular);
 };
 
-searchBtn.addEventListener("click", function () {
-  loadMeals();
-});
+loadPopular();
