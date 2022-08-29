@@ -10,10 +10,8 @@ const loadPopular = () => {
 const displayPopular = (meal) => {
   const popularContainer = document.getElementById("popular-meal-container");
   popularContainer.innerHTML = `
-  <div class="bg-light">
-                    <img src="${
-                      meal.strMealThumb
-                    }" class="card-img-top"/>
+  <div class="bg-danger">
+                    <img src="${meal.strMealThumb}" class="card-img-top"/>
                     <div class="card-body">
                       <h6 class="card-title">${meal.strMeal}</h6>
                       <p class="card-text text-wrap">Ingredients:

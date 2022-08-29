@@ -13,11 +13,11 @@
     <link rel="stylesheet" href="css/style.css" />
     <title>Food Gunda</title>
   </head>
-  <body>
+  <body class="bg-dark">
     <header>
       <nav class="navbar navbar-light bg-primary">
         <div class="container-fluid">
-          <a class="navbar-brand bg-danger px-2 rounded text-light"
+          <a class="navbar-brand bg-danger px-4 rounded text-light"
             >Food Gunda</a
           >
           <div class="d-flex">
@@ -37,10 +37,17 @@
         </div>
       </nav>
     </header>
-    <main>
+    <main></main>
+      <h2 class="bg-primary text-light fs-4 text-center p-4 mt-1">
+        Hungry? Order on
+        <span class="bg-danger rounded text-dark px-2 py-1">Food Gunda</span>
+        right now! <br />
+        Enjoy free home delivery by our own helmet Bahini
+        <br />10 Lucky winners will get 1 singara and 50tk note
+      </h2>
       <section class="row row-cols-1 row-cols-md-2 g-2">
         <section class="col-9">
-          <h4 class="text-center m-5 bg-dark text-light rounded">
+          <h4 class="text-center p-4 bg-dark text-light">
             Search Results
           </h4>
           <div
@@ -49,8 +56,8 @@
           ></div>
         </section>
         <section class="col-3">
-          <div class="text-center bg-success">
-            <h3 class="text-light">Popular now</h3>
+          <div class="text-center bg-light rounded">
+            <h3>Popular now</h3>
             <div id="popular-meal-container"></div>
           </div>
           <div class="bg-warning text-center py-4">

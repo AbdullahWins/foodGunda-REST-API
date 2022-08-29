@@ -57,3 +57,5 @@ const displayMeals = (meals) => {
 searchBtn.addEventListener("click", function () {
   loadMeals();
 });
+
+loadMeals();
